@@ -2,6 +2,14 @@ package quantitymeasurement;
 
 import java.util.Objects;
 
+/**
+ * Refactoring Feet, Inch and Yard int enum Length
+ *
+ * @author Sampriti Roy Chowdhury
+ * @version 0.0.1
+ * @since 29-10-2021
+ */
+
 public class Length {
 
     private static final double FEET_TO_INCH = 12.0;
@@ -18,6 +26,7 @@ public class Length {
         this.value = value;
     }
 
+    //Compare method() is used to calculate Feet_To_Inch, Yard_To_Feet and Yard_To_Inch conversion.
     public boolean compare(Length that) {
         //return true;
        // if(this.unit.equals(that.unit))
@@ -31,6 +40,7 @@ public class Length {
         return false;
     }
 
+    //equals() Override to override the parent class method to compare this and that object type equality or not.
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;

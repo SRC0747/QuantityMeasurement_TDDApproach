@@ -7,6 +7,7 @@ public class Inch {
         this.value = value;
     }
 
+    //equals() Override to override the parent class method to compare this and that object type equality or not.
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
