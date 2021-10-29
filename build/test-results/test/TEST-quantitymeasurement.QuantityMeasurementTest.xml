@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-29T08:40:12" hostname="DESKTOP-U9VT6NQ" time="0.209">
+  <properties/>
+  <testcase name="given0FeetAnd0Feet_ShouldReturnEqual()" classname="quantitymeasurement.QuantityMeasurementTest" time="0.209"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
