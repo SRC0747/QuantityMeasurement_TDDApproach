@@ -6,7 +6,7 @@ public class Length {
 
     private static final double FEET_TO_INCH = 12.0;
 
-    enum Unit{ FEET, INCH };
+    enum Unit{ FEET, INCH, YARD };
 
     private final Unit unit;
     private final double value;
