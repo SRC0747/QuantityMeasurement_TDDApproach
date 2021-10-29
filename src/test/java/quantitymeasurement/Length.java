@@ -2,10 +2,15 @@ package quantitymeasurement;
 
 import java.util.Objects;
 
-public class Feet {
+public class Length {
+
+    enum Unit{ FEET, INCH };
+
+    private final Unit unit;
     private final double value;
 
-    public Feet(double value) {
+    public Length(Unit unit, double value) {
+        this.unit = unit;
         this.value = value;
     }
 
@@ -13,7 +18,7 @@ public class Feet {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-        Feet feet = (Feet) obj;
+        Length feet = (Length) obj;
         return Double.compare(feet.value, value) == 0;
     }
 }
