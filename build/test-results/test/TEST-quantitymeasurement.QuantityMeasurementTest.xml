@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-29T09:03:14" hostname="DESKTOP-U9VT6NQ" time="0.131">
+<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-29T13:56:32" hostname="DESKTOP-U9VT6NQ" time="0.129">
   <properties/>
-  <testcase name="given0FeetAnd0FeetFromDiffRef_ShouldReturnNotSameRef()" classname="quantitymeasurement.QuantityMeasurementTest" time="0.131"/>
+  <testcase name="given0InchAnd0Inch_ShouldReturnEqual()" classname="quantitymeasurement.QuantityMeasurementTest" time="0.129"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
