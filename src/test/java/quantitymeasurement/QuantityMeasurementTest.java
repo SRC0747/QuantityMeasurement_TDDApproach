@@ -101,10 +101,10 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    public void given12FeetAnd1Inch_ShouldReturnEqual() {
+    public void given1FeetAnd12Inch_ShouldReturnEqual() {
         Length feet = new Length(Length.Unit.FEET, 1.0);
         Length inch = new Length(Length.Unit.INCH, 12.0);
-        boolean compareCheck = inch.compare(feet);
+        boolean compareCheck = feet.compare(inch);
         Assertions.assertTrue(compareCheck);
     }
 }
