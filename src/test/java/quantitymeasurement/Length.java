@@ -18,7 +18,7 @@ public class Length {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-        Length feet = (Length) obj;
-        return Double.compare(feet.value, value) == 0;
+        Length length = (Length) obj;
+        return Double.compare(length.value, value) == 0 && unit == length.unit;
     }
 }
