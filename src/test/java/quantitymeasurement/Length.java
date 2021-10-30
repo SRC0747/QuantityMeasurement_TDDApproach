@@ -16,7 +16,7 @@ public class Length {
     private static final double YARD_TO_FEET = 3.0;
     private static final double YARD_TO_INCH = 36.0;
 
-    enum Unit{ FEET, INCH, YARD };
+    enum Unit{ FEET, INCH, YARD, CENTIMETER };
 
     private final Unit unit;
     private final double value;
@@ -28,13 +28,13 @@ public class Length {
 
     //Compare method() is used to calculate Feet_To_Inch, Yard_To_Feet and Yard_To_Inch conversion.
     public boolean compare(Length that) {
-        //return true;
-       // if(this.unit.equals(that.unit))
-            //return this.equals(that);
+        //Calculate 1 Feet = 12 Inch
         if(this.unit.equals(Unit.FEET) && that.unit.equals(Unit.INCH))
             return Double.compare(this.value*FEET_TO_INCH, that.value) == 0;
+        //Calculate 1 Yard = 3 Feet
         if(this.unit.equals(Unit.YARD) && that.unit.equals(Unit.FEET))
             return Double.compare(this.value*YARD_TO_FEET, that.value) == 0;
+        //Calculate 1 Yard = 36 Inch
         if(this.unit.equals(Unit.YARD) && that.unit.equals(Unit.INCH))
             return Double.compare(this.value*YARD_TO_INCH, that.value) == 0;
         return false;
