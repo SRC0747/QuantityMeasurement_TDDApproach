@@ -189,4 +189,11 @@ class QuantityMeasurementTest {
         Length centimeter2 = null;
         Assertions.assertNotEquals(centimeter1, centimeter2);
     }
+
+    @Test
+    public void given0CentimeterAnd0CentimeterFromDiffRef_ShouldReturnNotSameRef() {
+        Length centimeter1 = new Length(Length.Unit.CENTIMETER, 0.0);
+        Length centimeter2 = new Length(Length.Unit.CENTIMETER, 0.0);
+        Assertions.assertNotSame(centimeter1, centimeter2);
+    }
 }
