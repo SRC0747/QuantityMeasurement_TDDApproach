@@ -211,4 +211,12 @@ class QuantityMeasurementTest {
         boolean compareCheckLength = inch1.compare(centimeter1);
         Assertions.assertTrue(compareCheckLength);
     }
+
+    @Test
+    public void given0InchAnd1Centimeter_ShouldReturnNotEqualLength() {
+        Length inch1 = new Length(Length.Unit.INCH, 0.0);
+        Length centimeter1 = new Length(Length.Unit.CENTIMETER, 1.0);
+        boolean compareCheckLength = inch1.compare(centimeter1);
+        Assertions.assertFalse(compareCheckLength);
+    }
 }
