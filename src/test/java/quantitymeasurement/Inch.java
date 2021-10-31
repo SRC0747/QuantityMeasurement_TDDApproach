@@ -1,5 +1,14 @@
 package quantitymeasurement;
 
+
+/**
+ * Inch class to convert entity int inch unit
+ *
+ * @author Sampriti Roy Chowdhury
+ * @version 0.0.1
+ * @since 31-10-2021
+ */
+
 public class Inch {
     private final double value;
 
