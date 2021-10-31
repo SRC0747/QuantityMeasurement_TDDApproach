@@ -27,7 +27,11 @@ public class Length {
         this.value = value;
     }
 
-    //Compare method() is used to calculate Feet_To_Inch, Yard_To_Feet and Yard_To_Inch and Inch_To_Centimeter conversion.
+    /**
+     * Comparing Two Entities of Same or Different Type for type Checking purpose
+     * @param that object of Length
+     * @return equals or not after comparing this and that entity
+     */
     public boolean compare(Length that) {
         if(this.unit.equals(that.unit))
             return this.equals(that);
@@ -46,7 +50,11 @@ public class Length {
         return false;
     }
 
-    //equals() Override to override the parent class method to compare this and that object type equality or not.
+    /**
+     * equals method overriding the parent class to check equality
+     * @param obj of equals method
+     * @return the passing parameterised object is equal or not with the given object
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
