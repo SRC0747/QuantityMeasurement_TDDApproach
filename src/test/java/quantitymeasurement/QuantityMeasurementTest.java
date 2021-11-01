@@ -285,4 +285,12 @@ class QuantityMeasurementTest {
         Assertions.assertEquals(expectedSum, actualSum);
     }
 
+    @Test
+    void given2Inch2$5Cm_WhenAdded_ShouldReturn3Inch() {
+        QuantityMeasurement inch = new QuantityMeasurement(Length.INCH, 2.0);
+        QuantityMeasurement centimeter = new QuantityMeasurement(Length.CENTIMETER, 2.5);
+        QuantityMeasurement expected_SumOutput = new QuantityMeasurement(Length.INCH, 3.0);
+        QuantityMeasurement actual_SumOutput = inch.sumOfQuantity(centimeter, Length.INCH);
+        Assertions.assertEquals(expected_SumOutput, actual_SumOutput);
+    }
 }
