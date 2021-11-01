@@ -266,4 +266,13 @@ class QuantityMeasurementTest {
         QuantityMeasurement actual_SumResult = inch1.sumOfQuantity(inch2, Length.INCH);
         Assertions.assertEquals(expected_SumResult, actual_SumResult);
     }
+
+    @Test
+    void given1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch() {
+        QuantityMeasurement feet = new QuantityMeasurement(Length.FEET, 1.0);
+        QuantityMeasurement inch = new QuantityMeasurement(Length.INCH, 2.0);
+        QuantityMeasurement expectedSum = new QuantityMeasurement(Length.INCH, 14.0);
+        QuantityMeasurement actualSum = feet.sumOfQuantity(inch, Length.INCH);
+        Assertions.assertEquals(expectedSum, actualSum);
+    }
 }
