@@ -18,6 +18,22 @@ public class QuantityMeasurement {
         this.unit = unit;
     }
 
+    /**
+     * sumOfQuantity method is used for addition purpose of two entities and convert them into requierd resulted entity output.
+     * @param that object is for getting another one second entity
+     * @param requiredUnit to convert the sum result in the required resulted output
+     * @return the addition result
+     */
+    public QuantityMeasurement sumOfQuantity(QuantityMeasurement that, UnitConversion requiredUnit) {
+        double sumOfInput = this.unit.convertToBaseUnit(this) + that.unit.convertToBaseUnit(that);
+        return new QuantityMeasurement(requiredUnit, sumOfInput);
+    }
+
+    /**
+     * compare method to do the comparison of same or different types of entity
+     * @param that parameter is passed as the object of QuantityMeasurement to check equality
+     * @return equality or non-equality
+     */
     public boolean compare(QuantityMeasurement that) {
         if (this.unit.equals(that.unit))
             return this.equals(that);

@@ -3,14 +3,6 @@ package quantitymeasurement;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-/**
- * Test Cases to check the Equality, nullity and Reference Check and Comparing Same and different entities and Calculate Feet_To_Inch,Feet_To_Yard and Yard_To_Inch conversions.
- *
- * @author Sampriti Roy Chowdhury
- * @version 0.0.1
- * @since 29-10-2021
- */
-
 class QuantityMeasurementTest {
 
     @Test
@@ -264,5 +256,14 @@ class QuantityMeasurementTest {
         QuantityMeasurement inch = new QuantityMeasurement(Length.INCH, 2.0);
         boolean compareCheck = centimeter.compare(inch);
         Assertions.assertTrue(compareCheck);
+    }
+
+    @Test
+    void given2InchAnd2Inch_WhenAdded_ShouldReturn4Inch() {
+        QuantityMeasurement inch1 = new QuantityMeasurement(Length.INCH, 2.0);
+        QuantityMeasurement inch2 = new QuantityMeasurement(Length.INCH, 2.0);
+        QuantityMeasurement expected_SumResult = new QuantityMeasurement(Length.INCH, 4.0);
+        QuantityMeasurement actual_SumResult = inch1.sumOfQuantity(inch2, Length.INCH);
+        Assertions.assertEquals(expected_SumResult, actual_SumResult);
     }
 }
