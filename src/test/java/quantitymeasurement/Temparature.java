@@ -1,19 +1,20 @@
 package quantitymeasurement;
 
 /**
- * Refactoring gallon, litre and millilitre in enum Volume
+ * Refactoring Celsius and Fahrenheit in enum Temmparature
  *
  * @author Sampriti Roy Chowdhury
  * @version 0.0.1
  * @since 2-11-2021
  */
 
-public enum Volume implements UnitConversion{
-    MILLI_LITER(0.001), LITER(1), GALLON(3.78);
+public enum Temparature implements UnitConversion{
+
+    CENTIGRADE(1), FAHRENHEIT(2.12);
 
     private final double baseUnitConversion;
 
-    Volume(double baseUnitConversion) {
+    Temparature(double baseUnitConversion) {
         this.baseUnitConversion = baseUnitConversion;
     }
 

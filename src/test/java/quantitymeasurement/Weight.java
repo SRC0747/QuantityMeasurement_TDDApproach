@@ -1,6 +1,5 @@
 package quantitymeasurement;
 
-
 /**
  * Refactoring gallon, litre and millilitre in enum Weight
  *

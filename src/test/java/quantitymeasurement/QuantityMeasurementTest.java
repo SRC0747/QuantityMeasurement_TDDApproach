@@ -591,4 +591,11 @@ class QuantityMeasurementTest {
         QuantityMeasurement actual_SumResult = tonne.sumOfQuantity(gram, Weight.KILOGRAM);
         Assertions.assertEquals(expected_SumResult, actual_SumResult);
     }
+
+    @Test
+    public void given0DegCAnd0DegC_ShouldReturnEqualTemperature() {
+        QuantityMeasurement centigrade1 = new QuantityMeasurement(Temparature.CENTIGRADE, 0.0);
+        QuantityMeasurement centigrade2 = new QuantityMeasurement(Temparature.CENTIGRADE, 0.0);
+        Assertions.assertEquals(centigrade1, centigrade2);
+    }
 }
