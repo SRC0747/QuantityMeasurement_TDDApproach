@@ -335,4 +335,11 @@ class QuantityMeasurementTest {
         QuantityMeasurement litre2 = new QuantityMeasurement(Volume.LITER, 1.0);
         Assertions.assertNotEquals(litre1, litre2);
     }
+
+    @Test
+    public void given0LitreAndNull_ShouldReturnNotEqualVolume() {
+        QuantityMeasurement litre1 = new QuantityMeasurement(Volume.LITER, 0.0);
+        QuantityMeasurement litre2 = null;
+        Assertions.assertNotEquals(litre1, litre2);
+    }
 }
