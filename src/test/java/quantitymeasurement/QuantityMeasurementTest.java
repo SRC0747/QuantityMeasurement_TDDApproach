@@ -300,4 +300,11 @@ class QuantityMeasurementTest {
         QuantityMeasurement gallon2 = new QuantityMeasurement(Volume.GALLON, 0.0);
         Assertions.assertEquals(gallon1, gallon2);
     }
+
+    @Test
+    void given0GallonAnd1Gallon_ShouldReturnNotEqualVolume() {
+        QuantityMeasurement gallon1 = new QuantityMeasurement(Volume.GALLON, 0.0);
+        QuantityMeasurement gallon2 = new QuantityMeasurement(Volume.GALLON, 1.0);
+        Assertions.assertNotEquals(gallon1, gallon2);
+    }
 }
