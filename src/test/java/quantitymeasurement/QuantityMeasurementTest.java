@@ -479,4 +479,11 @@ class QuantityMeasurementTest {
         QuantityMeasurement tonne2 = new QuantityMeasurement(Weight.TONNE, 0.0);
         Assertions.assertEquals(tonne1, tonne2);
     }
+
+    @Test
+    public void given0TonneAnd1Tonne_ShouldReturnNotEqualWeight() {
+        QuantityMeasurement tonne1 = new QuantityMeasurement(Weight.TONNE, 0.0);
+        QuantityMeasurement tonne2 = new QuantityMeasurement(Weight.TONNE, 1.0);
+        Assertions.assertNotEquals(tonne1, tonne2);
+    }
 }
