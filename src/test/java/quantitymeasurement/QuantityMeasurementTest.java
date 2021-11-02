@@ -437,4 +437,11 @@ class QuantityMeasurementTest {
         QuantityMeasurement gram2 = null;
         Assertions.assertNotEquals(gram1, gram2);
     }
+
+    @Test
+    void given0GramAnd0GramFromDiffRef_ShouldReturnNotEqualWeight() {
+        QuantityMeasurement gram1 = new QuantityMeasurement(Weight.GRAM, 0.0);
+        QuantityMeasurement gram2 = new QuantityMeasurement(Weight.GRAM, 0.0);
+        Assertions.assertNotSame(gram1, gram2);
+    }
 }
