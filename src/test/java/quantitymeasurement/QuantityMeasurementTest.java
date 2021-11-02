@@ -251,7 +251,7 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given5CmAnd2Inch_WhenCompared_ShouldReturnEqualLength() {
+    public void given5CmAnd2Inch_WhenCompared_ShouldReturnEqualLength() {
         QuantityMeasurement centimeter = new QuantityMeasurement(Length.CENTIMETER, 5.0);
         QuantityMeasurement inch = new QuantityMeasurement(Length.INCH, 2.0);
         boolean compareCheck = centimeter.compare(inch);
@@ -259,7 +259,7 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given2InchAnd2Inch_WhenAdded_ShouldReturn4Inch() {
+    public void given2InchAnd2Inch_WhenAdded_ShouldReturn4Inch() {
         QuantityMeasurement inch1 = new QuantityMeasurement(Length.INCH, 2.0);
         QuantityMeasurement inch2 = new QuantityMeasurement(Length.INCH, 2.0);
         QuantityMeasurement expected_SumResult = new QuantityMeasurement(Length.INCH, 4.0);
@@ -268,7 +268,7 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch() {
+    public void given1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch() {
         QuantityMeasurement feet = new QuantityMeasurement(Length.FEET, 1.0);
         QuantityMeasurement inch = new QuantityMeasurement(Length.INCH, 2.0);
         QuantityMeasurement expectedSum = new QuantityMeasurement(Length.INCH, 14.0);
@@ -277,7 +277,7 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given1FeetAnd1Feet_WhenAdded_ShouldReturn24Inch() {
+    public void given1FeetAnd1Feet_WhenAdded_ShouldReturn24Inch() {
         QuantityMeasurement feet1 = new QuantityMeasurement(Length.FEET, 1.0);
         QuantityMeasurement feet2 = new QuantityMeasurement(Length.FEET, 1.0);
         QuantityMeasurement expectedSum = new QuantityMeasurement(Length.INCH, 24.0);
@@ -286,7 +286,7 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given2InchAnd2$5Cm_WhenAdded_ShouldReturn3Inch() {
+    public void given2InchAnd2$5Cm_WhenAdded_ShouldReturn3Inch() {
         QuantityMeasurement inch = new QuantityMeasurement(Length.INCH, 2.0);
         QuantityMeasurement centimeter = new QuantityMeasurement(Length.CENTIMETER, 2.5);
         QuantityMeasurement expected_SumOutput = new QuantityMeasurement(Length.INCH, 3.0);
@@ -295,23 +295,37 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given0GallonAnd0Gallon_ShouldReturnEqualVolume() {
+    public void given0GallonAnd0Gallon_ShouldReturnEqualVolume() {
         QuantityMeasurement gallon1 = new QuantityMeasurement(Volume.GALLON, 0.0);
         QuantityMeasurement gallon2 = new QuantityMeasurement(Volume.GALLON, 0.0);
         Assertions.assertEquals(gallon1, gallon2);
     }
 
     @Test
-    void given0GallonAnd1Gallon_ShouldReturnNotEqualVolume() {
+    public void given0GallonAnd1Gallon_ShouldReturnNotEqualVolume() {
         QuantityMeasurement gallon1 = new QuantityMeasurement(Volume.GALLON, 0.0);
         QuantityMeasurement gallon2 = new QuantityMeasurement(Volume.GALLON, 1.0);
         Assertions.assertNotEquals(gallon1, gallon2);
     }
 
     @Test
-    void given0GallonAndNull_ShouldReturnNotEqualVolume() {
+    public void given0GallonAndNull_ShouldReturnNotEqualVolume() {
         QuantityMeasurement gallon1 = new QuantityMeasurement(Volume.GALLON, 0.0);
         QuantityMeasurement gallon2 = null;
         Assertions.assertNotEquals(gallon1, gallon2);
+    }
+
+    @Test
+    public void given0GallonAnd0GallonFromDiffRef_ShouldReturnNotSameRef() {
+        QuantityMeasurement gallon1 = new QuantityMeasurement(Volume.GALLON, 0.0);
+        QuantityMeasurement gallon2 = new QuantityMeasurement(Volume.GALLON, 0.0);
+        Assertions.assertNotSame(gallon1, gallon2);
+    }
+
+    @Test
+    public void given0LitreAnd0Litre_ShouldReturnEqualVolume() {
+        QuantityMeasurement litre1 = new QuantityMeasurement(Volume.GALLON, 0.0);
+        QuantityMeasurement litre2 = new QuantityMeasurement(Volume.GALLON, 0.0);
+        Assertions.assertEquals(litre1, litre2);
     }
 }
