@@ -541,4 +541,12 @@ class QuantityMeasurementTest {
         boolean compareCheck = gram.compare(tonne);
         Assertions.assertTrue(compareCheck);
     }
+
+    @Test
+    public void given1GramAnd1Tonne_WhenCompared_ShouldReturnNotEqualWeight() {
+        QuantityMeasurement gram = new QuantityMeasurement(Weight.GRAM, 1.0);
+        QuantityMeasurement tonne = new QuantityMeasurement(Weight.TONNE, 1.0);
+        boolean compareCheck = gram.compare(tonne);
+        Assertions.assertFalse(compareCheck);
+    }
 }
