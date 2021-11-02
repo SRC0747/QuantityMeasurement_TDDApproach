@@ -403,8 +403,18 @@ class QuantityMeasurementTest {
     void given1GallonAnd3$78Liter_WhenAdded_ShouldReturn7$56Liter() {
         QuantityMeasurement gallon = new QuantityMeasurement(Volume.GALLON, 1.0);
         QuantityMeasurement liter = new QuantityMeasurement(Volume.LITER, 3.78);
-        QuantityMeasurement expectedSum = new QuantityMeasurement(Volume.LITER, 7.56);
-        QuantityMeasurement actualSum = gallon.sumOfQuantity(liter, Volume.LITER);
-        Assertions.assertEquals(expectedSum, actualSum);
+        QuantityMeasurement expected_SumResult = new QuantityMeasurement(Volume.LITER, 7.56);
+        QuantityMeasurement actual_SumResult = gallon.sumOfQuantity(liter, Volume.LITER);
+        Assertions.assertEquals(expected_SumResult, actual_SumResult);
     }
+
+    @Test
+    void given1LiterAnd1000MilliLiter_WhenAdded_ShouldReturn2Liter() {
+        QuantityMeasurement liter = new QuantityMeasurement(Volume.LITER, 1.0);
+        QuantityMeasurement milliliter = new QuantityMeasurement(Volume.MILLI_LITER, 1000.0);
+        QuantityMeasurement expected_SumResult = new QuantityMeasurement(Volume.LITER, 2.0);
+        QuantityMeasurement actual_SumResult = liter.sumOfQuantity(milliliter, Volume.LITER);
+        Assertions.assertEquals(expected_SumResult, actual_SumResult);
+    }
+
 }
