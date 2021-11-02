@@ -351,7 +351,7 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given0GallonAnd0Liter_WhenCompared_ShouldReturnEqualVolume() {
+    public void given0GallonAnd0Liter_WhenCompared_ShouldReturnEqualVolume() {
         QuantityMeasurement gallon = new QuantityMeasurement(Volume.GALLON, 0.0);
         QuantityMeasurement liter = new QuantityMeasurement(Volume.LITER, 0.0);
         boolean compareCheck = gallon.compare(liter);
@@ -359,7 +359,7 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given1GallonAnd1Liter_WhenCompared_ShouldReturnNotEqualVolume() {
+    public void given1GallonAnd1Liter_WhenCompared_ShouldReturnNotEqualVolume() {
         QuantityMeasurement gallon = new QuantityMeasurement(Volume.GALLON, 1.0);
         QuantityMeasurement liter = new QuantityMeasurement(Volume.LITER, 1.0);
         boolean compareCheck = gallon.compare(liter);
@@ -367,7 +367,7 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given1GallonAnd3$78Liter_WhenCompared_ShouldReturnEqualVolume() {
+    public void given1GallonAnd3$78Liter_WhenCompared_ShouldReturnEqualVolume() {
         QuantityMeasurement gallon = new QuantityMeasurement(Volume.GALLON, 1.0);
         QuantityMeasurement liter = new QuantityMeasurement(Volume.LITER, 3.78);
         boolean compareCheck = gallon.compare(liter);
@@ -375,7 +375,7 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given3$78LiterAnd1Gallon_WhenCompared_ShouldReturnEqualVolume() {
+    public void given3$78LiterAnd1Gallon_WhenCompared_ShouldReturnEqualVolume() {
         QuantityMeasurement liter = new QuantityMeasurement(Volume.LITER, 3.78);
         QuantityMeasurement gallon = new QuantityMeasurement(Volume.GALLON, 1.0);
         boolean compareCheck = liter.compare(gallon);
@@ -384,7 +384,7 @@ class QuantityMeasurementTest {
 
 
     @Test
-    void given1LiterAnd1000MilliLiter_WhenCompared_ShouldReturnEqualVolume() {
+    public void given1LiterAnd1000MilliLiter_WhenCompared_ShouldReturnEqualVolume() {
         QuantityMeasurement liter = new QuantityMeasurement(Volume.LITER, 1.0);
         QuantityMeasurement ml = new QuantityMeasurement(Volume.MILLI_LITER, 1000.0);
         boolean compareCheck = liter.compare(ml);
@@ -392,7 +392,7 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given1000MilliLiterAnd1Liter_WhenCompared_ShouldReturnEqualVolume() {
+    public void given1000MilliLiterAnd1Liter_WhenCompared_ShouldReturnEqualVolume() {
         QuantityMeasurement ml = new QuantityMeasurement(Volume.MILLI_LITER, 1000.0);
         QuantityMeasurement liter = new QuantityMeasurement(Volume.LITER, 1.0);
         boolean compareCheck = ml.compare(liter);
@@ -400,7 +400,7 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given1GallonAnd3$78Liter_WhenAdded_ShouldReturn7$56Liter() {
+    public void given1GallonAnd3$78Liter_WhenAdded_ShouldReturn7$56Liter() {
         QuantityMeasurement gallon = new QuantityMeasurement(Volume.GALLON, 1.0);
         QuantityMeasurement liter = new QuantityMeasurement(Volume.LITER, 3.78);
         QuantityMeasurement expected_SumResult = new QuantityMeasurement(Volume.LITER, 7.56);
@@ -409,7 +409,7 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given1LiterAnd1000MilliLiter_WhenAdded_ShouldReturn2Liter() {
+    public void given1LiterAnd1000MilliLiter_WhenAdded_ShouldReturn2Liter() {
         QuantityMeasurement liter = new QuantityMeasurement(Volume.LITER, 1.0);
         QuantityMeasurement milliliter = new QuantityMeasurement(Volume.MILLI_LITER, 1000.0);
         QuantityMeasurement expected_SumResult = new QuantityMeasurement(Volume.LITER, 2.0);
@@ -417,4 +417,10 @@ class QuantityMeasurementTest {
         Assertions.assertEquals(expected_SumResult, actual_SumResult);
     }
 
+    @Test
+    public void given0GramAnd0Gram_ShouldReturnEqualWeight() {
+        QuantityMeasurement gram1 = new QuantityMeasurement(Weight.GRAM, 0.0);
+        QuantityMeasurement gram2 = new QuantityMeasurement(Weight.GRAM, 0.0);
+        Assertions.assertEquals(gram1, gram2);
+    }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-02T08:48:35" hostname="DESKTOP-U9VT6NQ" time="0.054">
+<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-02T15:34:56" hostname="DESKTOP-U9VT6NQ" time="0.131">
   <properties/>
-  <testcase name="given1LiterAnd1000MilliLiter_WhenAdded_ShouldReturn2Liter()" classname="quantitymeasurement.QuantityMeasurementTest" time="0.054"/>
+  <testcase name="given0GramAnd0Gram_ShouldReturnEqualWeight()" classname="quantitymeasurement.QuantityMeasurementTest" time="0.131"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
