@@ -626,4 +626,11 @@ class QuantityMeasurementTest {
         QuantityMeasurement fahrenheit2 = new QuantityMeasurement(Temparature.FAHRENHEIT, 0.0);
         Assertions.assertEquals(fahrenheit1, fahrenheit2);
     }
+
+    @Test
+    public void given0DegFAnd1DegF_ShouldReturnNotEqualTemperature() {
+        QuantityMeasurement fahrenheit1 = new QuantityMeasurement(Temparature.FAHRENHEIT, 0.0);
+        QuantityMeasurement fahrenheit2 = new QuantityMeasurement(Temparature.FAHRENHEIT, 1.0);
+        Assertions.assertNotEquals(fahrenheit1, fahrenheit2);
+    }
 }
