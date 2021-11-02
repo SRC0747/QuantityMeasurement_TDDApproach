@@ -439,9 +439,16 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given0GramAnd0GramFromDiffRef_ShouldReturnNotEqualWeight() {
+    public void given0GramAnd0GramFromDiffRef_ShouldReturnNotEqualWeight() {
         QuantityMeasurement gram1 = new QuantityMeasurement(Weight.GRAM, 0.0);
         QuantityMeasurement gram2 = new QuantityMeasurement(Weight.GRAM, 0.0);
         Assertions.assertNotSame(gram1, gram2);
+    }
+
+    @Test
+    public void given0KilogramAnd0Kilogram_ShouldReturnEqualWeight() {
+        QuantityMeasurement gram1 = new QuantityMeasurement(Weight.KILOGRAM, 0.0);
+        QuantityMeasurement gram2 = new QuantityMeasurement(Weight.KILOGRAM, 0.0);
+        Assertions.assertEquals(gram1, gram2);
     }
 }
