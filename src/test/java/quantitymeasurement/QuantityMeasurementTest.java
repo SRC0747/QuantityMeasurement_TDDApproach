@@ -398,4 +398,13 @@ class QuantityMeasurementTest {
         boolean compareCheck = ml.compare(liter);
         Assertions.assertTrue(compareCheck);
     }
+
+    @Test
+    void given1GallonAnd3$78Liter_WhenAdded_ShouldReturn7$56Liter() {
+        QuantityMeasurement gallon = new QuantityMeasurement(Volume.GALLON, 1.0);
+        QuantityMeasurement liter = new QuantityMeasurement(Volume.LITER, 3.78);
+        QuantityMeasurement expectedSum = new QuantityMeasurement(Volume.LITER, 7.56);
+        QuantityMeasurement actualSum = gallon.sumOfQuantity(liter, Volume.LITER);
+        Assertions.assertEquals(expectedSum, actualSum);
+    }
 }
