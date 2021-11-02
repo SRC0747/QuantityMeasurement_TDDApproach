@@ -324,8 +324,8 @@ class QuantityMeasurementTest {
 
     @Test
     public void given0LitreAnd0Litre_ShouldReturnEqualVolume() {
-        QuantityMeasurement litre1 = new QuantityMeasurement(Volume.GALLON, 0.0);
-        QuantityMeasurement litre2 = new QuantityMeasurement(Volume.GALLON, 0.0);
+        QuantityMeasurement litre1 = new QuantityMeasurement(Volume.LITER, 0.0);
+        QuantityMeasurement litre2 = new QuantityMeasurement(Volume.LITER, 0.0);
         Assertions.assertEquals(litre1, litre2);
     }
 }
