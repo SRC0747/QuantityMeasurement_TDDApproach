@@ -582,4 +582,13 @@ class QuantityMeasurementTest {
         boolean compareCheck = kilogram.compare(tonne);
         Assertions.assertTrue(compareCheck);
     }
+
+    @Test
+    public void given1TonneAnd1000Gram_WhenAdded_ShouldReturn1001KG() {
+        QuantityMeasurement tonne = new QuantityMeasurement(Weight.TONNE, 1.0);
+        QuantityMeasurement gram = new QuantityMeasurement(Weight.GRAM, 1000.0);
+        QuantityMeasurement expected_SumResult = new QuantityMeasurement(Weight.KILOGRAM, 1001.0);
+        QuantityMeasurement actual_SumResult = tonne.sumOfQuantity(gram, Weight.KILOGRAM);
+        Assertions.assertEquals(expected_SumResult, actual_SumResult);
+    }
 }
