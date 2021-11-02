@@ -598,4 +598,11 @@ class QuantityMeasurementTest {
         QuantityMeasurement centigrade2 = new QuantityMeasurement(Temparature.CENTIGRADE, 0.0);
         Assertions.assertEquals(centigrade1, centigrade2);
     }
+
+    @Test
+    public void given0DegCAnd1DegC_ShouldReturnNotEqualTemperature() {
+        QuantityMeasurement centigrade1 = new QuantityMeasurement(Temparature.CENTIGRADE, 0.0);
+        QuantityMeasurement centigrade2 = new QuantityMeasurement(Temparature.CENTIGRADE, 1.0);
+        Assertions.assertNotEquals(centigrade1, centigrade2);
+    }
 }
