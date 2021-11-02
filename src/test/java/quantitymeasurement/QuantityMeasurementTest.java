@@ -458,4 +458,11 @@ class QuantityMeasurementTest {
         QuantityMeasurement gram2 = new QuantityMeasurement(Weight.KILOGRAM, 1.0);
         Assertions.assertNotEquals(gram1, gram2);
     }
+
+    @Test
+    public void given0KilogramAndNull_ShouldReturnNotEqualWeight() {
+        QuantityMeasurement gram1 = new QuantityMeasurement(Weight.KILOGRAM, 0.0);
+        QuantityMeasurement gram2 = null;
+        Assertions.assertNotEquals(gram1, gram2);
+    }
 }
