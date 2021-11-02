@@ -655,4 +655,13 @@ class QuantityMeasurementTest {
         boolean compareCheck = centigrade.compare(fahrenheit);
         Assertions.assertTrue(compareCheck);
     }
+
+
+    @Test
+    public void given1DegCAnd1DegF_WhenCompared_ShouldReturnNotEqualTemperature() {
+        QuantityMeasurement centigrade = new QuantityMeasurement(Temparature.CENTIGRADE, 1.0);
+        QuantityMeasurement fahrenheit = new QuantityMeasurement(Temparature.FAHRENHEIT, 1.0);
+        boolean compareCheck = centigrade.compare(fahrenheit);
+        Assertions.assertFalse(compareCheck);
+    }
 }
