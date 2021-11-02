@@ -286,11 +286,18 @@ class QuantityMeasurementTest {
     }
 
     @Test
-    void given2Inch2$5Cm_WhenAdded_ShouldReturn3Inch() {
+    void given2InchAnd2$5Cm_WhenAdded_ShouldReturn3Inch() {
         QuantityMeasurement inch = new QuantityMeasurement(Length.INCH, 2.0);
         QuantityMeasurement centimeter = new QuantityMeasurement(Length.CENTIMETER, 2.5);
         QuantityMeasurement expected_SumOutput = new QuantityMeasurement(Length.INCH, 3.0);
         QuantityMeasurement actual_SumOutput = inch.sumOfQuantity(centimeter, Length.INCH);
         Assertions.assertEquals(expected_SumOutput, actual_SumOutput);
+    }
+
+    @Test
+    void given0GallonAnd0Gallon_ShouldReturnEqualVolume() {
+        QuantityMeasurement gallon1 = new QuantityMeasurement(Volume.GALLON, 0.0);
+        QuantityMeasurement gallon2 = new QuantityMeasurement(Volume.GALLON, 0.0);
+        Assertions.assertEquals(gallon1, gallon2);
     }
 }

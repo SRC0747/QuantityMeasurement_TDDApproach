@@ -10,5 +10,5 @@ package quantitymeasurement;
  */
 
 public interface UnitConversion {
-    double convertToBaseUnit(QuantityMeasurement obj);
+    double convertToBaseUnit(QuantityMeasurement quantityMeasurement);
 }

@@ -3,7 +3,7 @@ package quantitymeasurement;
 import java.util.Objects;
 
 /**
- * Refactoring Feet, Inch and Yard int enum Length
+ * Refactoring Feet, Inch and Yard in enum Length
  *
  * @author Sampriti Roy Chowdhury
  * @version 0.0.1
@@ -22,11 +22,11 @@ public enum Length implements UnitConversion {
 
     /**
      * equals method overriding the parent class to check equality
-     * @param obj of QuantityMeasurement of equals method
+     * @param quantityMeasurement of QuantityMeasurement of equals method
      * @return the value by converting into proper unit by baseUnitConversion
      */
     @Override
-    public double convertToBaseUnit(QuantityMeasurement obj) {
-        return obj.value * baseUnitConversion;
+    public double convertToBaseUnit(QuantityMeasurement quantityMeasurement) {
+        return quantityMeasurement.value * baseUnitConversion;
     }
 }
