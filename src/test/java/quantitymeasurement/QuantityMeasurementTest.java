@@ -557,4 +557,13 @@ class QuantityMeasurementTest {
         boolean compareCheck = kilogram.compare(gram);
         Assertions.assertTrue(compareCheck);
     }
+
+
+    @Test
+    public void given1000GramAnd1Kilogram_WhenCompared_ShouldReturnEqualWeight() {
+        QuantityMeasurement gram = new QuantityMeasurement(Weight.GRAM, 1000.0);
+        QuantityMeasurement kilogram = new QuantityMeasurement(Weight.KILOGRAM, 1.0);
+        boolean compareCheck = gram.compare(kilogram);
+        Assertions.assertTrue(compareCheck);
+    }
 }
