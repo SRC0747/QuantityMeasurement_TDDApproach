@@ -664,4 +664,12 @@ class QuantityMeasurementTest {
         boolean compareCheck = centigrade.compare(fahrenheit);
         Assertions.assertFalse(compareCheck);
     }
+
+    @Test
+    public void given212DegFAnd100DegC_WhenCompared_ShouldReturnEqualTemp() {
+        QuantityMeasurement DEG_F = new QuantityMeasurement(Temparature.FAHRENHEIT, 1.0);
+        QuantityMeasurement DEG_C = new QuantityMeasurement(Temparature.CENTIGRADE, 2.12);
+        boolean compareCheck = DEG_F.compare(DEG_C);
+        Assertions.assertTrue(compareCheck);
+    }
 }
