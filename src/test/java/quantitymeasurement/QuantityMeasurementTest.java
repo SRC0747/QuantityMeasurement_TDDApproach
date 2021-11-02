@@ -640,4 +640,11 @@ class QuantityMeasurementTest {
         QuantityMeasurement fahrenheit2 = null;
         Assertions.assertNotSame(fahrenheit1, fahrenheit2);
     }
+
+    @Test
+    public void given0DegFAnd0DegFFromDiffRef_ShouldReturnNotEqualTemperature() {
+        QuantityMeasurement fahrenheit1 = new QuantityMeasurement(Temparature.FAHRENHEIT, 0.0);
+        QuantityMeasurement fahrenheit2 = new QuantityMeasurement(Temparature.FAHRENHEIT, 0.0);
+        Assertions.assertNotSame(fahrenheit1, fahrenheit2);
+    }
 }
