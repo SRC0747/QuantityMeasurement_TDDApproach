@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-02T16:52:01" hostname="DESKTOP-U9VT6NQ" time="0.043">
+<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-02T16:57:28" hostname="DESKTOP-U9VT6NQ" time="0.073">
   <properties/>
-  <testcase name="given0KilogramAnd0Gram_WhenCompared_ShouldReturnEqualWeight()" classname="quantitymeasurement.QuantityMeasurementTest" time="0.043"/>
+  <testcase name="given1KilogramAnd1Gram_WhenCompared_ShouldReturnNotEqualWeight()" classname="quantitymeasurement.QuantityMeasurementTest" time="0.073"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
