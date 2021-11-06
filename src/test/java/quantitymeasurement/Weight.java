@@ -18,9 +18,9 @@ public enum Weight implements UnitConversion{
     }
 
     /**
-     * equals method overriding the parent class to check equality
-     * @param quantityMeasurement of QuantityMeasurement of equals method
-     * @return the value by converting into proper unit by baseUnitConversion
+     * convertToBaseUnit is used to convert the given unit length into baseUnit(GRAM)
+     * @param quantityMeasurement
+     * @return value after converting into baseUnit
      */
     @Override
     public double convertToBaseUnit(QuantityMeasurement quantityMeasurement) {
