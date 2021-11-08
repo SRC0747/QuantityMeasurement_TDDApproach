@@ -1,4 +1,4 @@
-package quantitymeasurement;
+package com.bridgelabz_quantitymeasurement;
 
 /**
  * Refactoring QuantityMeasurement by comparing same and different units and converting into baseUnit

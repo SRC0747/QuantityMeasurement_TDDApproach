@@ -1,4 +1,4 @@
-package quantitymeasurement;
+package com.bridgelabz_quantitymeasurement;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -217,21 +217,24 @@ class QuantityMeasurementTest {
     public void given1InchAnd1Centimeter_ShouldReturnNotEqual() {
         QuantityMeasurement inch = new QuantityMeasurement(Length.INCH, 1.0);
         QuantityMeasurement centimeter = new QuantityMeasurement(Length.CENTIMETER, 1.0);
-        Assertions.assertNotEquals(inch, centimeter);
+        boolean compareCheck = inch.compare(centimeter);
+        Assertions.assertFalse(compareCheck);
     }
 
     @Test
     public void given0InchAnd0Centimeter_ShouldReturnEqualLength() {
         QuantityMeasurement inch = new QuantityMeasurement(Length.INCH, 0.0);
         QuantityMeasurement centimeter = new QuantityMeasurement(Length.CENTIMETER, 0.0);
-        Assertions.assertEquals(inch, centimeter);
+        boolean compareCheck = inch.compare(centimeter);
+        Assertions.assertTrue(compareCheck);
     }
 
     @Test
     public void given0InchAnd1Centimeter_ShouldReturnNotEqualLength() {
         QuantityMeasurement inch = new QuantityMeasurement(Length.INCH, 0.0);
         QuantityMeasurement centimeter = new QuantityMeasurement(Length.CENTIMETER, 1.0);
-        Assertions.assertNotEquals(inch, centimeter);
+        boolean compareCheck = inch.compare(centimeter);
+        Assertions.assertFalse(compareCheck);
     }
 
     @Test

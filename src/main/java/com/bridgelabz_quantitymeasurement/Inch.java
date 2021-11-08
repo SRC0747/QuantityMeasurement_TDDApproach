@@ -1,4 +1,4 @@
-package quantitymeasurement;
+package com.bridgelabz_quantitymeasurement;
 
 
 /**
