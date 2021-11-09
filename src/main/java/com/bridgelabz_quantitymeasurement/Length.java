@@ -1,7 +1,7 @@
 package com.bridgelabz_quantitymeasurement;
 
 /**
- * Refactoring Feet, Inch and Yard in enum Length
+ * Calculate relation of Length(INCH,CENTIMETER,FEET,YARD) and convert into baseUnit(INCH)
  *
  * @author Sampriti Roy Chowdhury
  * @version 0.0.1

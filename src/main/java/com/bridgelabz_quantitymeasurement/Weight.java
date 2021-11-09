@@ -1,7 +1,7 @@
 package com.bridgelabz_quantitymeasurement;
 
 /**
- * Refactoring gallon, litre and millilitre in enum Weight
+ * Calculate relation of Weight(GRAM,KILOGRAM,TONNE) and convert into baseUnit(GRAM)
  *
  * @author Sampriti Roy Chowdhury
  * @version 0.0.1

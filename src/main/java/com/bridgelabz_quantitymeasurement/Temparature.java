@@ -1,7 +1,7 @@
 package com.bridgelabz_quantitymeasurement;
 
 /**
- * Refactoring Celsius and Fahrenheit in enum Temmparature
+ * Calculate relation of Temparature(Centigrade and Fahrenheit) and convert into baseUnit(Centigrade)
  *
  * @author Sampriti Roy Chowdhury
  * @version 0.0.1

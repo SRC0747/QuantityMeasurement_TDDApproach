@@ -1,7 +1,7 @@
 package com.bridgelabz_quantitymeasurement;
 
 /**
- * Refactoring gallon, litre and millilitre in enum Volume
+ * Calculate relation of Volume(MILLI_LITER,LITER,GALLON) and convert into baseUnit(MILLI_LITER)
  *
  * @author Sampriti Roy Chowdhury
  * @version 0.0.1

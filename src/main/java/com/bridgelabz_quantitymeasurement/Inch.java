@@ -2,7 +2,7 @@ package com.bridgelabz_quantitymeasurement;
 
 
 /**
- * Inch class to convert entity int inch unit
+ * Check and Compare the Equality of inch unit
  *
  * @author Sampriti Roy Chowdhury
  * @version 0.0.1

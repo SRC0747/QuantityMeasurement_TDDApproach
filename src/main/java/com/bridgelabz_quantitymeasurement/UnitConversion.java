@@ -2,7 +2,7 @@ package com.bridgelabz_quantitymeasurement;
 
 
 /**
- * Creating Interface to convert the feet,centimeter and yard int baseUnit(Inch)
+ * Convert the different units(Length,Weight,Volume,Temparature) into baseUnit(Inch)
  *
  * @author Sampriti Roy Chowdhury
  * @version 0.0.1
